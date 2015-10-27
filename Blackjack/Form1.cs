@@ -30,6 +30,7 @@ namespace Blackjack
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.AppendText("You Clicked The Button!\r\n");
+            textBox1.AppendText("This is a test!\r\n");
         }
     }
 }
