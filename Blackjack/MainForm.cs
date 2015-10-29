@@ -12,19 +12,12 @@ namespace Blackjack
 {
     public partial class MainForm : Form
     {
-        private readonly object textBox1;
-
         public MainForm()
         {
             InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
