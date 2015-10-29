@@ -26,5 +26,10 @@ namespace Blackjack
         {
 
         }
+
+        private void menuItem5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
