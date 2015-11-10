@@ -31,5 +31,15 @@ namespace Blackjack
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItem7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

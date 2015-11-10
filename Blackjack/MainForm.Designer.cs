@@ -39,6 +39,8 @@
             this.menuItem4 = new System.Windows.Forms.MenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -59,17 +61,18 @@
             // menuItem5
             // 
             this.menuItem5.Index = 0;
-            this.menuItem5.Text = "";
+            this.menuItem5.Text = "New Game";
             // 
             // menuItem6
             // 
             this.menuItem6.Index = 1;
-            this.menuItem6.Text = "";
+            this.menuItem6.Text = "Help";
             // 
             // menuItem7
             // 
             this.menuItem7.Index = 2;
-            this.menuItem7.Text = "";
+            this.menuItem7.Text = "Quit";
+            this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
             // 
             // menuItem2
             // 
@@ -91,16 +94,10 @@
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1568, 1038);
+            this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "BlackJake Game!!!!!!!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // imageList1
             // 
@@ -108,11 +105,25 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Blackjack.Properties.Resources.Mainbjack;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1568, 998);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1568, 1038);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1568, 998);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -120,6 +131,7 @@
             this.Name = "MainForm";
             this.Text = "BlackJack";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,6 +148,7 @@
         private System.Windows.Forms.MenuItem menuItem4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
