@@ -56,22 +56,6 @@
             this.menuItem7});
             this.menuItem1.Text = "&Menu";
             // 
-            // menuItem5
-            // 
-            this.menuItem5.Index = 0;
-            this.menuItem5.Text = "New Game";
-            this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click);
-            // 
-            // menuItem6
-            // 
-            this.menuItem6.Index = 1;
-            this.menuItem6.Text = "Help";
-            // 
-            // menuItem7
-            // 
-            this.menuItem7.Index = 2;
-            this.menuItem7.Text = "Quit";
-            // 
             // menuItem2
             // 
             this.menuItem2.Index = 1;
@@ -114,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1568, 1038);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Menu = this.mainMenu1;
             this.Name = "MainForm";
             this.Text = "BlackJack";
