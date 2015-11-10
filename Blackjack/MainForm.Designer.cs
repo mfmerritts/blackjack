@@ -56,6 +56,21 @@
             this.menuItem7});
             this.menuItem1.Text = "&Menu";
             // 
+            // menuItem5
+            // 
+            this.menuItem5.Index = 0;
+            this.menuItem5.Text = "";
+            // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 1;
+            this.menuItem6.Text = "";
+            // 
+            // menuItem7
+            // 
+            this.menuItem7.Index = 2;
+            this.menuItem7.Text = "";
+            // 
             // menuItem2
             // 
             this.menuItem2.Index = 1;
@@ -76,13 +91,14 @@
             // 
             // label1
             // 
-            // comment test!
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(430, 448);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(215, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(743, 85);
+            this.label1.Size = new System.Drawing.Size(371, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "BlackJake Game!!!!!!!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -95,11 +111,11 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1568, 1038);
+            this.ClientSize = new System.Drawing.Size(784, 540);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Menu = this.mainMenu1;
             this.Name = "MainForm";
             this.Text = "BlackJack";
