@@ -39,7 +39,7 @@ namespace Blackjack
 
         private void menuItem7_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
