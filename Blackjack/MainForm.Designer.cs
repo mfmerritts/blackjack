@@ -114,7 +114,7 @@
             this.pictureBox1.Image = global::Blackjack.Properties.Resources.Mainbjack;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1568, 958);
+            this.pictureBox1.Size = new System.Drawing.Size(1568, 878);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -122,14 +122,13 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(473, 321);
+            this.button1.Location = new System.Drawing.Point(473, 281);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(650, 100);
+            this.button1.Size = new System.Drawing.Size(654, 100);
             this.button1.TabIndex = 2;
             this.button1.Text = "Start Game";
             this.button1.UseVisualStyleBackColor = false;
@@ -153,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1568, 958);
+            this.ClientSize = new System.Drawing.Size(1568, 878);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
