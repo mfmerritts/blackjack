@@ -31,5 +31,52 @@ namespace Blackjack
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItem7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItem6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Blackjack Game Rules! \n 1. Dealer deals the cards \n 2. Dealer deals the cards \n 3. Dealer deals the cards \n 4. Dealer deals the cards \n 5. Dealer deals the cards \n 6. Dealer deals the cards \n 7. Dealer deals the cards Dealer deals the cards");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.button3.Visible = true;
+            this.button4.Visible = true;
+            this.button1.Visible = false;
+            this.button2.Visible = false;
+
+            this.button3.BringToFront();
+            this.button4.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
