@@ -55,7 +55,8 @@ namespace Blackjack
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.button3.Visible = true;
+            this.button4.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,6 +65,11 @@ namespace Blackjack
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
