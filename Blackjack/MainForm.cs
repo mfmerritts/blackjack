@@ -57,6 +57,11 @@ namespace Blackjack
         {
             this.button3.Visible = true;
             this.button4.Visible = true;
+            this.button1.Visible = false;
+            this.button2.Visible = false;
+
+            this.button3.BringToFront();
+            this.button4.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
