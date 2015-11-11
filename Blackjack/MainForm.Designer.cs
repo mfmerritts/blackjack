@@ -49,6 +49,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.menuItem8 = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +76,8 @@
             // menuItem6
             // 
             this.menuItem6.Index = 1;
+            this.menuItem6.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem8});
             this.menuItem6.Text = "Help";
             this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click);
             // 
@@ -231,6 +234,11 @@
             this.button9.Text = "button9";
             this.button9.UseVisualStyleBackColor = true;
             // 
+            // menuItem8
+            // 
+            this.menuItem8.Index = 0;
+            this.menuItem8.Text = "Terminology";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -287,6 +295,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.MenuItem menuItem8;
     }
 }
 
