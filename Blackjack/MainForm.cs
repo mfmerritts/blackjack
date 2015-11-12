@@ -144,18 +144,24 @@ namespace Blackjack
 
         private void menuItem3_Click(object sender, EventArgs e)
         {
-            playaudio();
+            playAudio();
         }
 
         private void menuItem4_Click(object sender, EventArgs e)
         {
-
+            stopAudio();
         }
 
-        private void playaudio() // defining the function
+        private void playAudio() // defining the function
         {
             SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.cardsShuffling); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
             audio.Play();
+        }
+
+        private void stopAudio() // defining the function
+        {
+            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.cardsShuffling);
+            audio.Stop();
         }
     }
 }
