@@ -82,6 +82,9 @@ namespace Blackjack
             this.button8.Visible = true;
             this.button9.Visible = true;
 
+            this.button3.Visible = false;
+            this.button4.Visible = false;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
