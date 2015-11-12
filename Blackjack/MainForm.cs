@@ -85,6 +85,9 @@ namespace Blackjack
             this.button3.Visible = false;
             this.button4.Visible = false;
 
+            this.richTextBox1.Visible = true;
+            this.richTextBox2.Visible = true;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -113,6 +116,16 @@ namespace Blackjack
         }
 
         private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
