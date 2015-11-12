@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Blackjack
 {
@@ -139,6 +140,22 @@ namespace Blackjack
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuItem3_Click(object sender, EventArgs e)
+        {
+            playaudio();
+        }
+
+        private void menuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playaudio() // defining the function
+        {
+            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.cardsShuffling); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
+            audio.Play();
         }
     }
 }

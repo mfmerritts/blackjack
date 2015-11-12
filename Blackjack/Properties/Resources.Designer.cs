@@ -63,20 +63,19 @@ namespace Blackjack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bjack {
+        internal static System.Drawing.Bitmap bjackMain {
             get {
-                object obj = ResourceManager.GetObject("bjack", resourceCulture);
+                object obj = ResourceManager.GetObject("bjackMain", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap bjackMain {
+        internal static System.IO.UnmanagedMemoryStream cardsShuffling {
             get {
-                object obj = ResourceManager.GetObject("bjackMain", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("cardsShuffling", resourceCulture);
             }
         }
         

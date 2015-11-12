@@ -106,11 +106,13 @@
             // 
             this.menuItem3.Index = 0;
             this.menuItem3.Text = "On";
+            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
             // 
             // menuItem4
             // 
             this.menuItem4.Index = 1;
             this.menuItem4.Text = "Off";
+            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
             // 
             // label1
             // 
@@ -130,7 +132,7 @@
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(473, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(654, 100);
