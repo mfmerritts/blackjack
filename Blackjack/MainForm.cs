@@ -154,13 +154,13 @@ namespace Blackjack
 
         private void playAudio() // defining the function
         {
-            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.cardsShuffling); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
-            audio.Play();
+            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.backgroundMusic); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
+            audio.PlayLooping();
         }
 
         private void stopAudio() // defining the function
         {
-            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.cardsShuffling);
+            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.backgroundMusic);
             audio.Stop();
         }
     }
