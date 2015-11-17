@@ -15099,9 +15099,6 @@
         //v/9f/2//P/8//y/+v/6P/c/9X/z//K/8L/w/++/7j/sf+r/6f/o/8L
 </value>
   </data>
-  <data name="Mainbjack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mainbjack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="backgroundMusic" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
@@ -38630,8 +38627,5 @@
         9Fn0o/SM9Ov02PR09Wr1F/b79ZX2T/Yl95T2o/fm9un3OvcT+Jn3J/j391T4QPiL+HP4nvhs+JP4QPh1
         +CH4cPg7+FH4WPg2+G74JPh3+Cv4hfgL
 </value>
-  </data>
-  <data name="Chip100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chip100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
