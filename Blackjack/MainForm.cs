@@ -23,6 +23,11 @@ namespace Blackjack
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(1580, 960);
+            pictureBox2.BackColor = Color.Transparent;
+
+            // Change parent for overlay PictureBox...
+            pictureBox2.Parent = pictureBox1;
 
         }
 
@@ -80,6 +85,7 @@ namespace Blackjack
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.menuItem5.Enabled = true;
             this.button5.Visible = true;
             this.button6.Visible = true;
             this.button7.Visible = true;
@@ -91,6 +97,13 @@ namespace Blackjack
 
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
+
+            MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+
+            this.pictureBox2.Enabled = true;
+            this.pictureBox3.Enabled = true;
+            this.pictureBox4.Enabled = true;
+            this.pictureBox5.Enabled = true;
 
         }
 
@@ -112,7 +125,10 @@ namespace Blackjack
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            this.button6.Enabled = true;
+            this.button7.Enabled = true;
+            this.button8.Enabled = true;
+            this.button9.Enabled = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -165,6 +181,70 @@ namespace Blackjack
         {
             SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.backgroundMusic);
             audio.Stop();
+        }
+
+        private void menuItem5_Click_1(object sender, EventArgs e)
+        {
+            this.button5.Visible = true;
+            this.button6.Visible = true;
+            this.button7.Visible = true;
+            this.button8.Visible = true;
+            this.button9.Visible = true;
+
+            this.button5.Enabled = false;
+            this.button6.Enabled = false;
+            this.button7.Enabled = false;
+            this.button8.Enabled = false;
+            this.button9.Enabled = false;
+
+            this.button3.Visible = false;
+            this.button4.Visible = false;
+
+            this.richTextBox1.Visible = true;
+            this.richTextBox2.Visible = true;
+
+            this.button10.Visible = false;
+
+            MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+
+            this.pictureBox2.Enabled = true;
+            this.pictureBox3.Enabled = true;
+            this.pictureBox4.Enabled = true;
+            this.pictureBox5.Enabled = true;
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("100 clickd");
+            this.button5.Enabled = true;
+            this.button10.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("25 clickd");
+            this.button5.Enabled = true;
+            this.button10.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("5 clickd");
+            this.button5.Enabled = true;
+            this.button10.Visible = true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1 clickd");
+            this.button5.Enabled = true;
+            this.button10.Visible = true;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
