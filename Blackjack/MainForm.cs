@@ -91,6 +91,8 @@ namespace Blackjack
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
 
+            MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+
         }
 
         private void button4_Click(object sender, EventArgs e)
