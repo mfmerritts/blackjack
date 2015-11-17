@@ -20,6 +20,7 @@ namespace Blackjack
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(1580, 960);
 
         }
 

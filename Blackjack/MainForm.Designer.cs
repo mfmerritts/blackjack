@@ -42,7 +42,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,18 +154,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Blackjack.Properties.Resources.bjackMain;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1564, 869);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkGray;
@@ -200,7 +188,7 @@
             this.button5.BackColor = System.Drawing.Color.DodgerBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(340, 768);
+            this.button5.Location = new System.Drawing.Point(340, 820);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 80);
             this.button5.TabIndex = 6;
@@ -215,7 +203,7 @@
             this.button6.BackColor = System.Drawing.Color.DodgerBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(585, 768);
+            this.button6.Location = new System.Drawing.Point(585, 820);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(220, 80);
             this.button6.TabIndex = 7;
@@ -230,7 +218,7 @@
             this.button7.BackColor = System.Drawing.Color.DodgerBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(830, 768);
+            this.button7.Location = new System.Drawing.Point(830, 820);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(220, 80);
             this.button7.TabIndex = 8;
@@ -245,7 +233,7 @@
             this.button8.BackColor = System.Drawing.Color.DodgerBlue;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(1075, 768);
+            this.button8.Location = new System.Drawing.Point(1075, 820);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(220, 80);
             this.button8.TabIndex = 9;
@@ -260,7 +248,7 @@
             this.button9.BackColor = System.Drawing.Color.DodgerBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(1320, 768);
+            this.button9.Location = new System.Drawing.Point(1320, 820);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(220, 80);
             this.button9.TabIndex = 10;
@@ -274,7 +262,7 @@
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.85F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(23, 700);
+            this.richTextBox1.Location = new System.Drawing.Point(23, 750);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(294, 60);
@@ -288,7 +276,7 @@
             this.richTextBox2.BackColor = System.Drawing.SystemColors.Highlight;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.85F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(23, 783);
+            this.richTextBox2.Location = new System.Drawing.Point(23, 835);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(294, 60);
@@ -297,14 +285,25 @@
             this.richTextBox2.Visible = false;
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Blackjack.Properties.Resources.bjackMain;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1564, 849);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1564, 869);
+            this.ClientSize = new System.Drawing.Size(1564, 849);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button9);
@@ -320,9 +319,9 @@
             this.Controls.Add(this.button4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(1590, 980);
+            this.MaximumSize = new System.Drawing.Size(1580, 980);
             this.Menu = this.mainMenu1;
-            this.MinimumSize = new System.Drawing.Size(1590, 980);
+            this.MinimumSize = new System.Drawing.Size(1580, 980);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BlackJack";
