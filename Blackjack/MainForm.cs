@@ -17,7 +17,10 @@ namespace Blackjack
         {
             InitializeComponent();
         }
+        public void cardFlip()
+        {
 
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
 
