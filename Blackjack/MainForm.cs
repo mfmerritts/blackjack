@@ -206,30 +206,41 @@ namespace Blackjack
             this.pictureBox3.Enabled = true;
             this.pictureBox4.Enabled = true;
             this.pictureBox5.Enabled = true;
+
+            this.button10.Visible = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("100 clickd");
             this.button5.Enabled = true;
+            this.button10.Visible = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("25 clickd");
             this.button5.Enabled = true;
+            this.button10.Visible = true;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("5 clickd");
             this.button5.Enabled = true;
+            this.button10.Visible = true;
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("1 clickd");
             this.button5.Enabled = true;
+            this.button10.Visible = true;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

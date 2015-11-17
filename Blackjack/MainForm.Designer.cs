@@ -56,6 +56,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -280,7 +281,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(23, 750);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(294, 60);
+            this.richTextBox1.Size = new System.Drawing.Size(162, 60);
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "Bet: ";
             this.richTextBox1.Visible = false;
@@ -294,7 +295,7 @@
             this.richTextBox2.Location = new System.Drawing.Point(23, 835);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(294, 60);
+            this.richTextBox2.Size = new System.Drawing.Size(290, 60);
             this.richTextBox2.TabIndex = 12;
             this.richTextBox2.Text = "Pot: $1000";
             this.richTextBox2.Visible = false;
@@ -361,6 +362,20 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Gold;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(205, 750);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(134, 60);
+            this.button10.TabIndex = 17;
+            this.button10.Text = "Clear Bet";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -369,6 +384,7 @@
             this.BackgroundImage = global::Blackjack.Properties.Resources.bjackMain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1554, 869);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -436,6 +452,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button10;
     }
 }
 
