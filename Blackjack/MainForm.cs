@@ -190,21 +190,25 @@ namespace Blackjack
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("100 clickd");
+            this.button5.Enabled = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("25 clickd");
+            this.button5.Enabled = true;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("5 clickd");
+            this.button5.Enabled = true;
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("1 clickd");
+            this.button5.Enabled = true;
         }
     }
 }
