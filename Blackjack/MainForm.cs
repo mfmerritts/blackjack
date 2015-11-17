@@ -97,6 +97,11 @@ namespace Blackjack
 
             MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
 
+            this.pictureBox2.Enabled = true;
+            this.pictureBox3.Enabled = true;
+            this.pictureBox4.Enabled = true;
+            this.pictureBox5.Enabled = true;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -117,7 +122,10 @@ namespace Blackjack
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            this.button6.Enabled = true;
+            this.button7.Enabled = true;
+            this.button8.Enabled = true;
+            this.button9.Enabled = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -180,11 +188,24 @@ namespace Blackjack
             this.button8.Visible = true;
             this.button9.Visible = true;
 
+            this.button5.Enabled = false;
+            this.button6.Enabled = false;
+            this.button7.Enabled = false;
+            this.button8.Enabled = false;
+            this.button9.Enabled = false;
+
             this.button3.Visible = false;
             this.button4.Visible = false;
 
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
+
+            MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+
+            this.pictureBox2.Enabled = true;
+            this.pictureBox3.Enabled = true;
+            this.pictureBox4.Enabled = true;
+            this.pictureBox5.Enabled = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
