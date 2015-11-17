@@ -72,8 +72,10 @@
             // 
             // menuItem5
             // 
+            this.menuItem5.Enabled = false;
             this.menuItem5.Index = 0;
             this.menuItem5.Text = "New Game";
+            this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click_1);
             // 
             // menuItem6
             // 
@@ -186,6 +188,7 @@
             // 
             this.button5.AutoSize = true;
             this.button5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.Enabled = false;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(340, 820);
@@ -201,6 +204,7 @@
             // 
             this.button6.AutoSize = true;
             this.button6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button6.Enabled = false;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(585, 820);
@@ -216,6 +220,7 @@
             // 
             this.button7.AutoSize = true;
             this.button7.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button7.Enabled = false;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(830, 820);
@@ -231,6 +236,7 @@
             // 
             this.button8.AutoSize = true;
             this.button8.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button8.Enabled = false;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(1075, 820);
@@ -246,6 +252,7 @@
             // 
             this.button9.AutoSize = true;
             this.button9.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button9.Enabled = false;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(1320, 820);
@@ -292,7 +299,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1564, 849);
+            this.pictureBox1.Size = new System.Drawing.Size(1554, 869);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -303,7 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1564, 849);
+            this.ClientSize = new System.Drawing.Size(1554, 869);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button9);

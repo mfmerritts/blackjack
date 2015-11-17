@@ -78,6 +78,7 @@ namespace Blackjack
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.menuItem5.Enabled = true;
             this.button5.Visible = true;
             this.button6.Visible = true;
             this.button7.Visible = true;
@@ -163,6 +164,21 @@ namespace Blackjack
         {
             SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.backgroundMusic);
             audio.Stop();
+        }
+
+        private void menuItem5_Click_1(object sender, EventArgs e)
+        {
+            this.button5.Visible = true;
+            this.button6.Visible = true;
+            this.button7.Visible = true;
+            this.button8.Visible = true;
+            this.button9.Visible = true;
+
+            this.button3.Visible = false;
+            this.button4.Visible = false;
+
+            this.richTextBox1.Visible = true;
+            this.richTextBox2.Visible = true;
         }
     }
 }
