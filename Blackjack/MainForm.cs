@@ -21,6 +21,10 @@ namespace Blackjack
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.Size = new Size(1580, 960);
+            pictureBox2.BackColor = Color.Transparent;
+
+            // Change parent for overlay PictureBox...
+            pictureBox2.Parent = pictureBox1;
 
         }
 
@@ -181,6 +185,26 @@ namespace Blackjack
 
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("100 clickd");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("25 clickd");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("5 clickd");
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1 clickd");
         }
     }
 }
