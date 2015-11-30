@@ -95,6 +95,75 @@
   <ItemGroup>
     <None Include="Resources\bjackMain.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\card\10_of_clubs.png" />
+    <Content Include="Resources\card\10_of_diamonds.png" />
+    <Content Include="Resources\card\10_of_hearts.png" />
+    <Content Include="Resources\card\10_of_spades.png" />
+    <Content Include="Resources\card\2_of_clubs.png" />
+    <Content Include="Resources\card\2_of_diamonds.png" />
+    <Content Include="Resources\card\2_of_hearts.png" />
+    <Content Include="Resources\card\2_of_spades.png" />
+    <Content Include="Resources\card\3_of_clubs.png" />
+    <Content Include="Resources\card\3_of_diamonds.png" />
+    <Content Include="Resources\card\3_of_hearts.png" />
+    <Content Include="Resources\card\3_of_spades.png" />
+    <Content Include="Resources\card\4_of_clubs.png" />
+    <Content Include="Resources\card\4_of_diamonds.png" />
+    <Content Include="Resources\card\4_of_hearts.png" />
+    <Content Include="Resources\card\4_of_spades.png" />
+    <Content Include="Resources\card\5_of_clubs.png" />
+    <Content Include="Resources\card\5_of_diamonds.png" />
+    <Content Include="Resources\card\5_of_hearts.png" />
+    <Content Include="Resources\card\5_of_spades.png" />
+    <Content Include="Resources\card\6_of_clubs.png" />
+    <Content Include="Resources\card\6_of_diamonds.png" />
+    <Content Include="Resources\card\6_of_hearts.png" />
+    <Content Include="Resources\card\6_of_spades.png" />
+    <Content Include="Resources\card\7_of_clubs.png" />
+    <Content Include="Resources\card\7_of_diamonds.png" />
+    <Content Include="Resources\card\7_of_hearts.png" />
+    <Content Include="Resources\card\7_of_spades.png" />
+    <Content Include="Resources\card\8_of_clubs.png" />
+    <Content Include="Resources\card\8_of_diamonds.png" />
+    <Content Include="Resources\card\8_of_hearts.png" />
+    <Content Include="Resources\card\8_of_spades.png" />
+    <Content Include="Resources\card\9_of_clubs.png" />
+    <Content Include="Resources\card\9_of_diamonds.png" />
+    <Content Include="Resources\card\9_of_hearts.png" />
+    <Content Include="Resources\card\9_of_spades.png" />
+    <Content Include="Resources\card\ace_of_clubs.png" />
+    <Content Include="Resources\card\ace_of_diamonds.png" />
+    <Content Include="Resources\card\ace_of_hearts.png" />
+    <Content Include="Resources\card\ace_of_spades.png" />
+    <Content Include="Resources\card\ace_of_spades2.png" />
+    <Content Include="Resources\card\black_joker.png" />
+    <Content Include="Resources\card\jack_of_clubs.png" />
+    <Content Include="Resources\card\jack_of_clubs2.png" />
+    <Content Include="Resources\card\jack_of_diamonds.png" />
+    <Content Include="Resources\card\jack_of_diamonds2.png" />
+    <Content Include="Resources\card\jack_of_hearts.png" />
+    <Content Include="Resources\card\jack_of_hearts2.png" />
+    <Content Include="Resources\card\jack_of_spades.png" />
+    <Content Include="Resources\card\jack_of_spades2.png" />
+    <Content Include="Resources\card\king_of_clubs.png" />
+    <Content Include="Resources\card\king_of_clubs2.png" />
+    <Content Include="Resources\card\king_of_diamonds.png" />
+    <Content Include="Resources\card\king_of_diamonds2.png" />
+    <Content Include="Resources\card\king_of_hearts.png" />
+    <Content Include="Resources\card\king_of_hearts2.png" />
+    <Content Include="Resources\card\king_of_spades.png" />
+    <Content Include="Resources\card\king_of_spades2.png" />
+    <Content Include="Resources\card\queen_of_clubs.png" />
+    <Content Include="Resources\card\queen_of_clubs2.png" />
+    <Content Include="Resources\card\queen_of_diamonds.png" />
+    <Content Include="Resources\card\queen_of_diamonds2.png" />
+    <Content Include="Resources\card\queen_of_hearts.png" />
+    <Content Include="Resources\card\queen_of_hearts2.png" />
+    <Content Include="Resources\card\queen_of_spades.png" />
+    <Content Include="Resources\card\queen_of_spades2.png" />
+    <Content Include="Resources\card\red_joker.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
