@@ -87,25 +87,5 @@ namespace Blackjack.Properties {
                 return ResourceManager.GetStream("cardsShuffling", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Chip100 {
-            get {
-                object obj = ResourceManager.GetObject("Chip100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Mainbjack {
-            get {
-                object obj = ResourceManager.GetObject("Mainbjack", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
