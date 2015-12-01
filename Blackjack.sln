@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackServer", "BlackjackServer\BlackjackServer.csproj", "{B6F6112D-335E-4767-B837-974BD24361AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetwork", "..\..\..\Desktop\NetworkExamples\EasyNetwork\EasyNetwork.csproj", "{B334B401-B417-4B74-862E-1FD8709FFA9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetwork", "EasyNetwork\EasyNetwork.csproj", "{B334B401-B417-4B74-862E-1FD8709FFA9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
