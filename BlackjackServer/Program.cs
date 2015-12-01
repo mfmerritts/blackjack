@@ -10,6 +10,7 @@ namespace BlackjackServer
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
