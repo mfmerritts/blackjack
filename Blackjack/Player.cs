@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CS3450
+namespace Blackjack
 {
     public class Player : Person
     {

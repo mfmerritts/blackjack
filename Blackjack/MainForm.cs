@@ -104,6 +104,7 @@ namespace Blackjack
 
         }
 
+        // Join active game
         private void button4_Click(object sender, EventArgs e)
         {
             this.button5.Visible = true;
@@ -117,7 +118,6 @@ namespace Blackjack
 
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
-
         }
 
         private void button5_Click(object sender, EventArgs e)
