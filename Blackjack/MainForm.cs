@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using InputBox;
 
 namespace Blackjack
 {
@@ -56,7 +57,6 @@ namespace Blackjack
         private void menuItem6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Blackjack Game Rules! \n 1. Dealer deals the cards \n 2. Dealer deals the cards \n 3. Dealer deals the cards \n 4. Dealer deals the cards \n 5. Dealer deals the cards \n 6. Dealer deals the cards \n 7. Dealer deals the cards Dealer deals the cards");
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,7 +95,8 @@ namespace Blackjack
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
 
-            MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+            InputBox.Form1 tempName = new InputBox.Form1();
+            tempName.Show();
 
             this.pictureBox2.Enabled = true;
             this.pictureBox3.Enabled = true;
