@@ -14,6 +14,8 @@ namespace Blackjack
 {
     public partial class MainForm : Form
     {
+        InputBox.Form1 tempName = new InputBox.Form1();
+
         public MainForm()
         {
             InitializeComponent();
@@ -90,7 +92,6 @@ namespace Blackjack
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
 
-            InputBox.Form1 tempName = new InputBox.Form1();
             tempName.Show();
 
             this.pictureBox2.Enabled = true;
@@ -118,6 +119,38 @@ namespace Blackjack
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (tempName.gotName == true)
+            {
+                if (textBox1.Text == "")
+                {
+                    textBox1.Text = tempName.personName;
+                }
+                else if (textBox2.Text == "")
+                {
+                    textBox2.Text = tempName.personName;
+                }
+                else if (textBox3.Text == "")
+                {
+                    textBox3.Text = tempName.personName;
+                }
+                else if (textBox4.Text == "")
+                {
+                    textBox4.Text = tempName.personName;
+                }
+                else if (textBox5.Text == "")
+                {
+                    textBox5.Text = tempName.personName;
+                }
+                else {
+                    MessageBox.Show("Game is full!!");
+                }
+            }
+            this.textBox1.Visible = true;
+            this.textBox2.Visible = true;
+            this.textBox3.Visible = true;
+            this.textBox4.Visible = true;
+            this.textBox5.Visible = true;
+            this.textBox6.Visible = true;
             this.button6.Enabled = true;
             this.button7.Enabled = true;
             this.button8.Enabled = true;

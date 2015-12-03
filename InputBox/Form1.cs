@@ -19,9 +19,18 @@ namespace InputBox
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string personName = textInput.Text;
+            personName = textInput.Text;
             this.Close();
             MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+            gotName = true;
+        }
+
+        public TextBox TextBox1
+        {
+            get
+            {
+                return textInput;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

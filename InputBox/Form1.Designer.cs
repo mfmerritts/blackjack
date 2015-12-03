@@ -80,8 +80,10 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textInput;
+        public System.Windows.Forms.TextBox textInput;
         private System.Windows.Forms.Label label1;
+        public bool gotName;
+        public string personName;
     }
 }
 
