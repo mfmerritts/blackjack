@@ -99,8 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bjackMain.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\card\10_of_clubs.png" />
     <Content Include="Resources\card\10_of_diamonds.png" />
     <Content Include="Resources\card\10_of_hearts.png" />
