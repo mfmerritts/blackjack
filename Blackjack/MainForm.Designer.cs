@@ -57,11 +57,11 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            textBox1 = new System.Windows.Forms.TextBox();
+            textBox2 = new System.Windows.Forms.TextBox();
+            textBox3 = new System.Windows.Forms.TextBox();
+            textBox4 = new System.Windows.Forms.TextBox();
+            textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -394,48 +394,48 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 340);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(110, 31);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Visible = false;
+            textBox1.Location = new System.Drawing.Point(78, 340);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new System.Drawing.Size(110, 31);
+            textBox1.TabIndex = 18;
+            textBox1.Visible = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(390, 411);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(110, 31);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.Visible = false;
+            textBox2.Location = new System.Drawing.Point(390, 411);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new System.Drawing.Size(110, 31);
+            textBox2.TabIndex = 19;
+            textBox2.Visible = false;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(717, 456);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(110, 31);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.Visible = false;
+            textBox3.Location = new System.Drawing.Point(717, 456);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new System.Drawing.Size(110, 31);
+            textBox3.TabIndex = 20;
+            textBox3.Visible = false;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1036, 411);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(110, 31);
-            this.textBox4.TabIndex = 21;
-            this.textBox4.Visible = false;
+            textBox4.Location = new System.Drawing.Point(1036, 411);
+            textBox4.Name = "textBox4";
+            textBox4.ReadOnly = true;
+            textBox4.Size = new System.Drawing.Size(110, 31);
+            textBox4.TabIndex = 21;
+            textBox4.Visible = false;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(1339, 340);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(110, 31);
-            this.textBox5.TabIndex = 22;
-            this.textBox5.Visible = false;
+            textBox5.Location = new System.Drawing.Point(1339, 340);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new System.Drawing.Size(110, 31);
+            textBox5.TabIndex = 22;
+            textBox5.Visible = false;
             // 
             // textBox6
             // 
@@ -455,11 +455,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1544, 839);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(textBox5);
+            this.Controls.Add(textBox4);
+            this.Controls.Add(textBox3);
+            this.Controls.Add(textBox2);
+            this.Controls.Add(textBox1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -499,7 +499,7 @@
         }
 
         #endregion
-
+        public static BlackjackTable gameTable1 = new BlackjackTable();
         private System.Windows.Forms.MainMenu mainMenu1;
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem menuItem5;
@@ -527,11 +527,11 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        public static System.Windows.Forms.TextBox textBox1;
+        public static System.Windows.Forms.TextBox textBox2;
+        public static System.Windows.Forms.TextBox textBox3;
+        public static System.Windows.Forms.TextBox textBox4;
+        public static System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
     }
 }

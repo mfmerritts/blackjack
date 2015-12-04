@@ -115,7 +115,7 @@ namespace Blackjack
         }
 
         //Uses Fisher-Yeates Alogrithm to shuffle deck
-        public void shuffle_deck()
+        public void shuffle_Deck()
         {
             Random rng = new Random();
             int n = deck.Count;
@@ -462,7 +462,7 @@ namespace Blackjack
             {
                 deck.Clear();
                 this.create_Deck(1);
-                this.shuffle_deck();
+                this.shuffle_Deck();
             }
 
             //ends dealers turn
