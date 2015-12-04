@@ -10,6 +10,7 @@ namespace Blackjack
     {
         public int money;
         public int bet;
+        public int tempBet;
         public int split_bet;
         public Boolean active;
         public Boolean active_split;
@@ -22,6 +23,7 @@ namespace Blackjack
             active_split = false;
             second_Hand = new List<Card>();
             bet = 0;
+            tempBet = 0;
             split_bet = 0;
         }
 
@@ -119,6 +121,21 @@ namespace Blackjack
                 Console.WriteLine(this.get_Name() + " does not have any cards to split");
             }
         }  
+        
+        public void set_tempBet(int x)
+        {
+            tempBet += x;
+        }
+
+        public int get_tempBet()
+        {
+            return tempBet;
+        }
+
+        public void reset_tempBet()
+        {
+            tempBet = 0;
+        }
          
         //sets bet. This will take the amount form the money variable and put it into the bet variable             
         public void set_Bet(int x)

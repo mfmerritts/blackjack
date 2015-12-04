@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Blackjack
 {
@@ -22,7 +23,7 @@ namespace Blackjack
             deck = new List<Card>();
             table = new Player[5];
             dealer = new Dealer("Dealer", 888);
-            min_Bet = 10;      
+            min_Bet = 1;      
         }
 
         public void create_Deck(int x)
@@ -211,6 +212,7 @@ namespace Blackjack
                         Boolean has_blackjack = false;
                         if(table[i].sum_Hand() == 21)
                         {
+                            MessageBox.Show("Congrats you have a Blackjack!");
                             Console.WriteLine("Congrats " + table[i].get_Name() + ", you have a blackjack.");
                             table[i].give_Money(Convert.ToInt32(table[i].get_Bet() * 2.5));
                             table[i].deactivate();

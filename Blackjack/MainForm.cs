@@ -125,38 +125,15 @@ namespace Blackjack
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //if (tempName.gotName == true)
-            //{
-            //    if (textBox1.Text == "")
-            //    {
-            //        textBox1.Text = tempName.personName;
-            //    }
-            //    else if (textBox2.Text == "")
-            //    {
-            //        textBox2.Text = tempName.personName;
-            //    }
-            //    else if (textBox3.Text == "")
-            //    {
-            //        textBox3.Text = tempName.personName;
-            //    }
-            //    else if (textBox4.Text == "")
-            //    {
-            //        textBox4.Text = tempName.personName;
-            //    }
-            //    else if (textBox5.Text == "")
-            //    {
-            //        textBox5.Text = tempName.personName;
-            //    }
-            //    else {
-            //        MessageBox.Show("Game is full!!");
-            //    }
-            //}
 
             this.textBox6.Visible = true;
             this.button6.Enabled = true;
             this.button7.Enabled = true;
             this.button8.Enabled = true;
             this.button9.Enabled = true;
+
+            gameTable1.table[0].set_Bet(gameTable1.table[0].get_tempBet());
+            this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -244,35 +221,44 @@ namespace Blackjack
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("100 clickd");
+            //MessageBox.Show("100 clickd");
             this.button5.Enabled = true;
             this.button10.Visible = true;
+            gameTable1.table[0].set_tempBet(100);
+            this.richTextBox1.Text = "Bet: $" + gameTable1.table[0].get_tempBet().ToString();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("25 clickd");
+            //MessageBox.Show("25 clickd");
             this.button5.Enabled = true;
             this.button10.Visible = true;
+            gameTable1.table[0].set_tempBet(25);
+            this.richTextBox1.Text = "Bet: $" + gameTable1.table[0].get_tempBet().ToString();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("5 clickd");
+            //MessageBox.Show("5 clickd");
             this.button5.Enabled = true;
             this.button10.Visible = true;
+            gameTable1.table[0].set_tempBet(5);
+            this.richTextBox1.Text = "Bet: $" + gameTable1.table[0].get_tempBet().ToString();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1 clickd");
+            //MessageBox.Show("1 clickd");
             this.button5.Enabled = true;
             this.button10.Visible = true;
+            gameTable1.table[0].set_tempBet(1);
+            this.richTextBox1.Text = "Bet: $" + gameTable1.table[0].get_tempBet().ToString();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            gameTable1.table[0].reset_tempBet();
+            this.richTextBox1.Text = "Bet: $" + gameTable1.table[0].get_tempBet().ToString();
         }
     }
 }
