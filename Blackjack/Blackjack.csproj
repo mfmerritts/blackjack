@@ -170,12 +170,6 @@
     <Content Include="Resources\card\queen_of_spades2.png" />
     <Content Include="Resources\card\red_joker.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\InputBox\InputBox.csproj">
-      <Project>{18d739c0-bcea-4203-91a3-e0ef632df3c8}</Project>
-      <Name>InputBox</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

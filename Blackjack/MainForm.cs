@@ -14,11 +14,11 @@ namespace Blackjack
     public partial class MainForm : Form
     {
         
-        
-        InputName tempName = new InputName();
+        InputName tempName;
 
         public MainForm()
         {
+            tempName = new InputName(this);
             InitializeComponent();
         }
 

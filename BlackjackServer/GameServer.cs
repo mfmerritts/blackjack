@@ -14,10 +14,13 @@ namespace BlackjackServer
         private const int MAX_PLAYERS = 7;
         private NetworkObjects.PlayerListing playerListing;
 
+        public GameServer()
+        {
+            this.playerListing = new NetworkObjects.PlayerListing();
+        }
+
         public void start()
         {
-            playerListing = new NetworkObjects.PlayerListing();
-
             server.DataReceived += Server_DataReceived;
             server.Start();
 
