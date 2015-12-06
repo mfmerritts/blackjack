@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackServer", "Blackjac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetwork", "EasyNetwork\EasyNetwork.csproj", "{B334B401-B417-4B74-862E-1FD8709FFA9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputBox", "InputBox\InputBox.csproj", "{18D739C0-BCEA-4203-91A3-E0EF632DF3C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkObjects", "NetworkObjects\NetworkObjects.csproj", "{66C5FF2C-C91F-4618-88A8-8810BA4C43EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{B334B401-B417-4B74-862E-1FD8709FFA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B334B401-B417-4B74-862E-1FD8709FFA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B334B401-B417-4B74-862E-1FD8709FFA9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18D739C0-BCEA-4203-91A3-E0EF632DF3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18D739C0-BCEA-4203-91A3-E0EF632DF3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18D739C0-BCEA-4203-91A3-E0EF632DF3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18D739C0-BCEA-4203-91A3-E0EF632DF3C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C5FF2C-C91F-4618-88A8-8810BA4C43EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C5FF2C-C91F-4618-88A8-8810BA4C43EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C5FF2C-C91F-4618-88A8-8810BA4C43EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C5FF2C-C91F-4618-88A8-8810BA4C43EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

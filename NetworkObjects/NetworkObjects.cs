@@ -6,25 +6,49 @@ using System.Threading.Tasks;
 
 namespace NetworkObjects
 {
-    public class ClientHello
-    {
-        public string PlayerName { get; set; }
-
-        public int Value { get; set; }
-    }
-
     public class JoinGame
     {
-        public string GameToJoin { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class JoinGameResponse
+    {
+        public bool Success { get; set; }
+        public string ResponseMessage { get; set; }
+    }
+
+    public class PlayerJoined
+    {
+        public string Name { get; set; }
     }
 
     public class PlayerListing
     {
-        public PlayerListing()
+        public class Player
         {
-            PlayerNames = new List<string>();
+            public String Name { get; set; }
+            public Guid clientId { get; set; }
         }
 
-        public List<string> PlayerNames { get; set; }
+        public PlayerListing()
+        {
+            Players = new List<Player>();
+        }
+
+        public int NumPlayers()
+        {
+            return Players.Count;
+        }
+
+        public void AddPlayer(String name, Guid _clientId)
+        {
+            Player p = new Player();
+            p.Name = name;
+            p.clientId = _clientId;
+
+            Players.Add(p);
+        }
+
+        public List<Player> Players { get; set; }
     }
 }
