@@ -76,6 +76,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,6 +170,16 @@
     <Content Include="Resources\card\queen_of_spades.png" />
     <Content Include="Resources\card\queen_of_spades2.png" />
     <Content Include="Resources\card\red_joker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyNetwork\EasyNetwork.csproj">
+      <Project>{b334b401-b417-4b74-862e-1fd8709ffa9f}</Project>
+      <Name>EasyNetwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetworkObjects\NetworkObjects.csproj">
+      <Project>{66c5ff2c-c91f-4618-88a8-8810ba4c43eb}</Project>
+      <Name>NetworkObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

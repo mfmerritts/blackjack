@@ -8,18 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using EasyNetwork;
 
 namespace Blackjack
 {
     public partial class MainForm : Form
     {
-        
+        Client client = new Client("tcp://localhost:3000");
         InputName tempName;
 
         public MainForm()
         {
             tempName = new InputName(this);
             InitializeComponent();
+
+            client.DataReceived += Client_DataReceived;
+            client.Start();
+        }
+
+        private void Client_DataReceived(object receivedObject)
+        {
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -30,6 +39,11 @@ namespace Blackjack
             // Change parent for overlay PictureBox...
             pictureBox2.Parent = pictureBox1;
 
+        }
+  
+        private void MainForm_FormClosing(object sender, EventArgs e)
+        {
+            client.Stop();
         }
 
         private void menuItem5_Click(object sender, EventArgs e)
@@ -97,7 +111,20 @@ namespace Blackjack
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
 
-            tempName.Show();
+            if (tempName.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
+                Player one = new Player(tempName.InputResult, 1);
+                MainForm.gameTable1.add_Player(one);
+
+                textBox1.Text = one.get_Name();
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = true;
+                textBox5.Visible = true;
+            }
+
 
             this.pictureBox2.Enabled = true;
             this.pictureBox3.Enabled = true;
@@ -109,22 +136,33 @@ namespace Blackjack
         // Join active game
         private void button4_Click(object sender, EventArgs e)
         {
+            this.button3.Visible = false;
+            this.button4.Visible = false;
+
+            InputName input = new InputName(this);
+            if (input.ShowDialog() == DialogResult.OK)
+            {
+                this.labelJoiningGame.Visible = true;
+                NetworkObjects.JoinGame joinGameMsg = new NetworkObjects.JoinGame();
+                joinGameMsg.Name = input.InputResult;
+                client.Send(joinGameMsg);
+            }
+
+            /*
             this.button5.Visible = true;
             this.button6.Visible = true;
             this.button7.Visible = true;
             this.button8.Visible = true;
             this.button9.Visible = true;
 
-            this.button3.Visible = false;
-            this.button4.Visible = false;
-
             this.richTextBox1.Visible = true;
             this.richTextBox2.Visible = true;
+            */
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
             this.textBox6.Visible = true;
             this.button6.Enabled = true;
             this.button7.Enabled = true;
@@ -177,13 +215,13 @@ namespace Blackjack
 
         private void playAudio() // defining the function
         {
-            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.backgroundMusic); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
+            SoundPlayer audio = new SoundPlayer(global::Blackjack.Properties.Resources.backgroundMusic); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
             audio.PlayLooping();
         }
 
         private void stopAudio() // defining the function
         {
-            SoundPlayer audio = new SoundPlayer(Blackjack.Properties.Resources.backgroundMusic);
+            SoundPlayer audio = new SoundPlayer(global::Blackjack.Properties.Resources.backgroundMusic);
             audio.Stop();
         }
 
