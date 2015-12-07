@@ -22,13 +22,16 @@ namespace Blackjack
             if(this.get_Turn())
             {
                 //deals two cards to dealer, this should actually happen before players begin thier turns
-                bjt.deal_Card_To_Person(5);
-                bjt.deal_Card_To_Person(5); //The card dealt below needs to be the face down card
+               // bjt.deal_Card_To_Person(5);
+                //bjt.deal_Card_To_Person(5); //The card dealt below needs to be the face down card
 
                 //Enters loops if dealer has less than 17
                 while (sum_Hand() < 17)
                 {
                     bjt.deal_Card_To_Person(5); //deals a card to the dealer
+                    Console.WriteLine("dealer's new hand:\n");
+                    this.print_Hand();
+                    Console.WriteLine("dealer's total is: " + this.sum_Hand() + "\n");
 
                     //if dealer has over 21, it will change the value of any aces to less than 21
                     if (sum_Hand() > 21)

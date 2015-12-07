@@ -406,16 +406,16 @@ namespace Blackjack
                         //check the players hand vs dealer                
                         if (table[i].sum_Hand() > dealer.sum_Hand() || dealer.sum_Hand() > 21)
                         {
-                            Console.WriteLine(table[i].get_Name() + " has won!");
+                            MessageBox.Show(table[i].get_Name() + " has won!");
                             table[i].give_Money(table[i].get_Bet() * 2);
                         }
                         else if (table[i].sum_Hand() < dealer.sum_Hand())
                         {
-                            Console.WriteLine(table[i].get_Name() + " has lost!");
+                            MessageBox.Show(table[i].get_Name() + " has lost!");
                         }
                         else
                         {
-                            Console.WriteLine(table[i].get_Name() + " tied with dealer");
+                            MessageBox.Show(table[i].get_Name() + " tied with dealer");
                             table[i].give_Money(table[i].get_Bet());
                         }
                     }
@@ -425,16 +425,16 @@ namespace Blackjack
                     {
                         if (table[i].sum_Split() > dealer.sum_Hand() || dealer.sum_Hand() > 21)
                         {
-                            Console.WriteLine(table[i].get_Name() + "'s split hand has won!");
+                            MessageBox.Show(table[i].get_Name() + "'s split hand has won!");
                             table[i].give_Money(table[i].get_Split_Bet() * 2);
                         }
                         else if (table[i].sum_Split() < dealer.sum_Hand())
                         {
-                            Console.WriteLine(table[i].get_Name() + "'s split hand has lost!");
+                            MessageBox.Show(table[i].get_Name() + "'s split hand has lost!");
                         }
                         else
                         {
-                            Console.WriteLine(table[i].get_Name() + "'s split tied with dealer");
+                            MessageBox.Show(table[i].get_Name() + "'s split tied with dealer");
                             table[i].give_Money(table[i].get_Split_Bet());
                         }
                     }
@@ -489,9 +489,11 @@ namespace Blackjack
                 deal_Card_To_Person(5);
 
                 //output player's hand
+                Console.WriteLine("This is Player's opending hand:\n");
                 table[0].print_Hand();
 
                 //output dealer's hand
+                Console.WriteLine("\nThis is the dealers opening hand:\n");
                 dealer.print_Hand(); 
             }
         }

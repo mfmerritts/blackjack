@@ -178,18 +178,46 @@ namespace Blackjack
             //enable surrender
             this.button11.Enabled = true;
 
+            //activates player
+            gameTable1.table[0].activate();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            int i = 0;
             //disables surrender
             this.button11.Enabled = false;
+
+            //start turn if hit
+                     
+                gameTable1.deal_Card_To_Person(i);
+                if (gameTable1.table[i].sum_Hand() > 21)
+                {
+                    for (int y = 0; y < gameTable1.table[i].hand.Count(); y++)
+                    {
+                        if (gameTable1.table[i].hand[y].get_Rank() == 'a' && gameTable1.table[i].sum_Hand() > 21)
+                        {
+                            gameTable1.table[i].hand[y].change_Ace();
+                        }
+                    }
+                }
+                if (gameTable1.table[i].sum_Hand() > 21)
+                {
+                    gameTable1.table[i].deactivate();
+                    MessageBox.Show("Sorry " + gameTable1.table[i].get_Name() + ", you have bust");
+                }
+                MessageBox.Show("total is " + gameTable1.table[i].sum_Hand());             
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             //disable surrender
             this.button11.Enabled = false;
+            this.button6.Enabled = false;
+            gameTable1.dealer.start_Turn();
+            gameTable1.dealer.auto_Deal(gameTable1);
+            gameTable1.check_Players_Vs_Dealer();
         }
 
         private void button8_Click(object sender, EventArgs e)
