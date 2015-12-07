@@ -171,6 +171,8 @@ namespace Blackjack
 
             gameTable1.table[0].set_Bet(gameTable1.table[0].get_tempBet());
             this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
+            gameTable1.test_Round();
+            this.button5.Enabled = false;
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -470,5 +470,30 @@ namespace Blackjack
             //ends dealers turn
             dealer.end_Turn();
         }
+
+        public void test_Round()
+        {
+            if (table[0].get_Bet() > min_Bet)
+            {
+                
+                //deals one card to person
+                deal_Card_To_Person(0);
+
+                //deals one card faceup to dealer
+                deal_Card_To_Person(5);
+
+                //deals second card to person
+                deal_Card_To_Person(0);
+
+                //deals second card facedown to dealer
+                deal_Card_To_Person(5);
+
+                //output player's hand
+                table[0].print_Hand();
+
+                //output dealer's hand
+                dealer.print_Hand(); 
+            }
+        }
     }
 }
