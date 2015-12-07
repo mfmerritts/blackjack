@@ -104,6 +104,7 @@ namespace Blackjack
             this.button7.Visible = true;
             this.button8.Visible = true;
             this.button9.Visible = true;
+            this.button11.Visible = true;
 
             this.button3.Visible = false;
             this.button4.Visible = false;
@@ -173,26 +174,34 @@ namespace Blackjack
             this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
             gameTable1.test_Round();
             this.button5.Enabled = false;
+
+            //enable surrender
+            this.button11.Enabled = true;
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            //disables surrender
+            this.button11.Enabled = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            //disable surrender
+            this.button11.Enabled = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            //disable surrender
+            this.button11.Enabled = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             gameTable1.print_Table();
+            this.button11.Enabled = false;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -234,12 +243,14 @@ namespace Blackjack
             this.button7.Visible = true;
             this.button8.Visible = true;
             this.button9.Visible = true;
+            this.button11.Visible = true;
 
             this.button5.Enabled = false;
             this.button6.Enabled = false;
             this.button7.Enabled = false;
             this.button8.Enabled = false;
             this.button9.Enabled = false;
+            this.button11.Enabled = false;
 
             this.button3.Visible = false;
             this.button4.Visible = false;
@@ -298,6 +309,11 @@ namespace Blackjack
         {
             gameTable1.table[0].reset_tempBet();
             this.richTextBox1.Text = "Bet: $" + gameTable1.table[0].get_tempBet().ToString();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
