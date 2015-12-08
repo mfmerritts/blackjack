@@ -412,6 +412,7 @@ namespace Blackjack
                         else if (table[i].sum_Hand() < dealer.sum_Hand())
                         {
                             MessageBox.Show(table[i].get_Name() + " has lost!");
+                            table[i].take_Money(table[i].get_Bet());
                         }
                         else
                         {

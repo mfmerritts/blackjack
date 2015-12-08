@@ -218,6 +218,7 @@ namespace Blackjack
             gameTable1.dealer.start_Turn();
             gameTable1.dealer.auto_Deal(gameTable1);
             gameTable1.check_Players_Vs_Dealer();
+            this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
         }
 
         private void button8_Click(object sender, EventArgs e)
