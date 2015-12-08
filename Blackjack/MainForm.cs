@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using EasyNetwork;
+using Blackjack.Properties;
 
 namespace Blackjack
 {
@@ -173,7 +174,10 @@ namespace Blackjack
             gameTable1.table[0].set_Bet(gameTable1.table[0].get_tempBet());
             this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
             gameTable1.test_Round();
-            this.pictureBox6.Image = Blackjack.Properties.Resources.ace_of_clubs;
+            this.pictureBox6.Image = gameTable1.table[0].hand[0].image;
+            this.pictureBox7.Image = gameTable1.table[0].hand[1].image;
+            this.pictureBox6.Visible = true;
+            this.pictureBox7.Visible = true;
             this.button5.Enabled = false;
 
             //enable surrender
