@@ -94,9 +94,17 @@ namespace Blackjack
         }
 
         //returns score
-        public int get_Score()
+        public int get_Score(bool zreo)
         {
-            return score;
+            if (zreo == false)
+            {
+                return score;
+            }
+            else
+            {
+                score = 0;
+                return score;
+            }
         }
 
         //returns rank

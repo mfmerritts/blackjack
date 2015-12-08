@@ -243,7 +243,7 @@ namespace Blackjack
             {
                 for(int i = 0; i < second_Hand.Count(); i++)
                 {
-                    sum = second_Hand[i].get_Score() + sum;
+                    sum = second_Hand[i].get_Score(false) + sum;
                 }
             }
             return sum;

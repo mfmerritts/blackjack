@@ -18,6 +18,9 @@ namespace Blackjack
         Client client = new Client("tcp://localhost:3000");
         InputName tempName;
 
+        public int clicked = 1;
+        public bool finish = false;
+
         public MainForm()
         {
             tempName = new InputName(this);
@@ -121,10 +124,18 @@ namespace Blackjack
 
                 textBox1.Text = one.get_Name();
                 textBox1.Visible = true;
+                
                 textBox2.Visible = true;
                 textBox3.Visible = true;
                 textBox4.Visible = true;
                 textBox5.Visible = true;
+                
+                textBox1.TextAlign = HorizontalAlignment.Center;
+                textBox2.TextAlign = HorizontalAlignment.Center;
+                textBox3.TextAlign = HorizontalAlignment.Center;
+                textBox4.TextAlign = HorizontalAlignment.Center;
+                textBox5.TextAlign = HorizontalAlignment.Center;
+                textBox6.TextAlign = HorizontalAlignment.Center;
             }
 
 
@@ -171,13 +182,31 @@ namespace Blackjack
             this.button8.Enabled = true;
             this.button9.Enabled = true;
 
-            gameTable1.table[0].set_Bet(gameTable1.table[0].get_tempBet());
-            this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
-            gameTable1.test_Round();
-            this.pictureBox6.Image = gameTable1.table[0].hand[0].image;
-            this.pictureBox7.Image = gameTable1.table[0].hand[1].image;
+            // new card...
+
+                gameTable1.table[0].set_Bet(gameTable1.table[0].get_tempBet());
+                this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
+                gameTable1.test_Round();
+                this.pictureBox6.Image = gameTable1.table[0].hand[0].image;
+                this.pictureBox7.Image = gameTable1.table[0].hand[1].image;
+                this.pictureBox11.Image = gameTable1.dealer.hand[0].image;
+                this.pictureBox12.Image = gameTable1.dealer.hand[1].image;
+
+                // person has total cards...
+                this.person1.Text = (gameTable1.table[0].sum_Hand(true)).ToString();
+            this.person1.Visible = true;
+
+            // dealer has total cards...
+
+            this.dealerLabel.Text = (gameTable1.dealer.sum_Hand(true)).ToString();
+            this.dealerLabel.Visible = true;
+
+
             this.pictureBox6.Visible = true;
             this.pictureBox7.Visible = true;
+
+            this.pictureBox7.BringToFront();
+
             this.button5.Enabled = false;
 
             //enable surrender
@@ -186,33 +215,89 @@ namespace Blackjack
             //activates player
             gameTable1.table[0].activate();
 
+            this.pictureBox11.Visible = true;
+            this.pictureBox12.Visible = true;
+            this.pictureBox12.BringToFront();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             int i = 0;
+
+            this.clicked++;
+
             //disables surrender
             this.button11.Enabled = false;
 
+            
             //start turn if hit
-                     
-                gameTable1.deal_Card_To_Person(i);
-                if (gameTable1.table[i].sum_Hand() > 21)
+
+            gameTable1.deal_Card_To_Person(i);
+
+            if (gameTable1.table[i].sum_Hand(true) == 21)
+            {
+                this.label1.Text = "BlackJack!";
+                this.label1.ForeColor = Color.Black;
+                this.label1.Font = new Font("Arial", 30);
+            }
+
+            else if (gameTable1.table[i].sum_Hand(true) > 21)
                 {
                     for (int y = 0; y < gameTable1.table[i].hand.Count(); y++)
                     {
-                        if (gameTable1.table[i].hand[y].get_Rank() == 'a' && gameTable1.table[i].sum_Hand() > 21)
+                        
+                        if (gameTable1.table[i].hand[y].get_Rank() == 'a' && gameTable1.table[i].sum_Hand(true) > 21)
                         {
                             gameTable1.table[i].hand[y].change_Ace();
                         }
                     }
                 }
-                MessageBox.Show("total is " + gameTable1.table[i].sum_Hand());
-                if (gameTable1.table[i].sum_Hand() > 21)
+
+            
+            if (this.clicked == 2)
+            {
+                this.pictureBox8.Image = gameTable1.table[0].hand[2].image;
+                this.pictureBox8.Visible = true;
+                this.pictureBox8.BringToFront();
+            }
+            if (this.clicked == 3)
+            {
+                this.pictureBox9.Image = gameTable1.table[0].hand[3].image;
+                this.pictureBox9.Visible = true;
+                this.pictureBox9.BringToFront();
+            }
+            if (this.clicked == 4)
+            {
+                this.pictureBox10.Image = gameTable1.table[0].hand[4].image;
+                this.pictureBox10.Visible = true;
+                this.pictureBox10.BringToFront();
+            }
+
+
+            // MessageBox.Show("total is " + gameTable1.table[i].sum_Hand());
+
+            this.person1.Text = (gameTable1.table[0].sum_Hand(true)).ToString();
+
+
+            if (gameTable1.table[i].sum_Hand(true) > 21)
                 {
                     gameTable1.table[i].deactivate();
-                    MessageBox.Show("Sorry " + gameTable1.table[i].get_Name() + ", you have bust");
-                }             
+                // MessageBox.Show("Sorry " + gameTable1.table[i].get_Name() + ", you have bust");
+                this.label1.Visible = true;
+                this.label1.BringToFront();
+                this.label1.BackColor = Color.White;
+                this.finish = true;
+
+                this.button5.Enabled = true;
+                this.button6.Enabled = false;
+                this.button7.Enabled = false;
+                this.button8.Enabled = false;
+                this.button9.Enabled = false;
+
+                this.button12.Visible = true;
+                this.button13.Visible = true;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -224,6 +309,46 @@ namespace Blackjack
             gameTable1.dealer.auto_Deal(gameTable1);
             gameTable1.check_Players_Vs_Dealer();
             this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
+
+
+            for (int i = 1; i < gameTable1.dealer.hand.Count(); i++)
+            {
+                if (i == 2)
+                {
+                    this.pictureBox13.Image = gameTable1.dealer.hand[i].image;
+                    this.pictureBox13.Visible = true;
+                    this.pictureBox13.BringToFront();
+
+                    this.pictureBox11.Location = new Point(337, 154);
+                    this.pictureBox12.Location = new Point(365, 154);
+                    this.pictureBox13.Location = new Point(393, 154);
+                }
+                if (i == 3)
+                {
+                    this.pictureBox14.Image = gameTable1.dealer.hand[i].image;
+                    this.pictureBox14.Visible = true;
+                    this.pictureBox14.BringToFront();
+
+                    this.pictureBox11.Location = new Point(323, 154);
+                    this.pictureBox12.Location = new Point(351, 154);
+                    this.pictureBox13.Location = new Point(379, 154);
+                    this.pictureBox14.Location = new Point(407, 154);
+                }
+                if (i == 4)
+                {
+                    this.pictureBox15.Image = gameTable1.dealer.hand[i].image;
+                    this.pictureBox15.Visible = true;
+                    this.pictureBox15.BringToFront();
+
+                    this.pictureBox11.Location = new Point(306, 154);
+                    this.pictureBox12.Location = new Point(344, 154);
+                    this.pictureBox13.Location = new Point(372, 154);
+                    this.pictureBox14.Location = new Point(400, 154);
+                    this.pictureBox15.Location = new Point(428, 154);
+                }
+            }
+            this.dealerLabel.Text = (gameTable1.dealer.sum_Hand(true)).ToString();
+            this.label1.BringToFront();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -348,6 +473,52 @@ namespace Blackjack
         private void button11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.finish = true;
+
+            this.clicked = 1;
+
+            gameTable1.table[0].sum_Hand(false);
+
+            gameTable1.dealer.sum_Hand(false);
+
+            this.person1.Text = "0";
+            this.dealerLabel.Text = "0";
+
+            this.label1.Visible = false;
+
+            this.pictureBox6.Visible = false;
+            this.pictureBox7.Visible = false;
+            this.pictureBox8.Visible = false;
+            this.pictureBox9.Visible = false;
+            this.pictureBox10.Visible = false;
+            this.pictureBox11.Visible = false;
+            this.pictureBox12.Visible = false;
+            this.pictureBox13.Visible = false;
+            this.pictureBox14.Visible = false;
+            this.pictureBox15.Visible = false;
+
+            //this.pictureBox6.Image.Dispose();
+            //this.pictureBox7.Image.Dispose();
+
+            this.pictureBox6.Image = null;
+            this.pictureBox7.Image = null;
+            this.pictureBox8.Image = null;
+            this.pictureBox9.Image = null;
+            this.pictureBox10.Image = null;
+            this.pictureBox11.Image = null;
+            this.pictureBox12.Image = null;
+            this.pictureBox13.Image = null;
+            this.pictureBox14.Image = null;
+            this.pictureBox15.Image = null;
+
+            this.button12.Visible = false;
+            this.button13.Visible = false;
+
+            this.button5.Enabled = true;
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Blackjack
         public Player[] table;
         public Dealer dealer;
         public int min_Bet;
+        public Form test;
 
         public BlackjackTable()
         {
@@ -23,7 +24,8 @@ namespace Blackjack
             deck = new List<Card>();
             table = new Player[5];
             dealer = new Dealer("Dealer", 888);
-            min_Bet = 1;      
+            min_Bet = 1;
+            test = new Form();
         }
 
         public void create_Deck(int x)
@@ -206,11 +208,11 @@ namespace Blackjack
                         deal_Card_To_Person(i);
                         deal_Card_To_Person(i);
                         table[i].print_Hand();
-                        Console.WriteLine("total is " + table[i].sum_Hand());
+                        Console.WriteLine("total is " + table[i].sum_Hand(true));
 
                         //if player has blackjack award money and deactivate
                         Boolean has_blackjack = false;
-                        if(table[i].sum_Hand() == 21)
+                        if(table[i].sum_Hand(true) == 21)
                         {
                             MessageBox.Show("Congrats you have a Blackjack!");
                             Console.WriteLine("Congrats " + table[i].get_Name() + ", you have a blackjack.");
@@ -258,7 +260,7 @@ namespace Blackjack
                                     this.deal_Card_To_Person(i);
                                     Console.WriteLine("New Hand:");
                                     table[i].print_Hand();
-                                    Console.WriteLine("total is " + table[i].sum_Hand());
+                                    Console.WriteLine("total is " + table[i].sum_Hand(true));
                                     Console.WriteLine("Split Hand:");
                                     table[i].print_Split_Hand();
                                     Console.WriteLine("total is " + table[i].sum_Split());
@@ -294,24 +296,24 @@ namespace Blackjack
                                 {
                                     case "hit":
                                         deal_Card_To_Person(i);
-                                        if (table[i].sum_Hand() > 21)
+                                        if (table[i].sum_Hand(true) > 21)
                                         {
                                             for (int y = 0; y < table[i].hand.Count(); y++)
                                             {
-                                                if (table[i].hand[y].get_Rank() == 'a' && table[i].sum_Hand() > 21)
+                                                if (table[i].hand[y].get_Rank() == 'a' && table[i].sum_Hand(true) > 21)
                                                 {
                                                     table[i].hand[y].change_Ace();
                                                 }
                                             }
                                         }
-                                        if (table[i].sum_Hand() > 21)
+                                        if (table[i].sum_Hand(true) > 21)
                                         {
                                             finish_Turn = true;
                                             table[i].deactivate();
                                             Console.WriteLine("Sorry " + table[i].get_Name() + ", you have bust");
                                         }
                                         table[i].print_Hand();
-                                        Console.WriteLine("total is " + table[i].sum_Hand());
+                                        Console.WriteLine("total is " + table[i].sum_Hand(true));
                                         break;
                                     case "stay":
                                         finish_Turn = true;
@@ -404,12 +406,12 @@ namespace Blackjack
                     if (table[i].get_Active() == true)
                     {        
                         //check the players hand vs dealer                
-                        if (table[i].sum_Hand() > dealer.sum_Hand() || dealer.sum_Hand() > 21)
+                        if (table[i].sum_Hand(true) > dealer.sum_Hand(true) || dealer.sum_Hand(true) > 21)
                         {
                             MessageBox.Show(table[i].get_Name() + " has won!");
                             table[i].give_Money(table[i].get_Bet() * 2);
                         }
-                        else if (table[i].sum_Hand() < dealer.sum_Hand())
+                        else if (table[i].sum_Hand(true) < dealer.sum_Hand(true))
                         {
                             MessageBox.Show(table[i].get_Name() + " has lost!");
                         }
@@ -423,12 +425,12 @@ namespace Blackjack
                     //checks each players split hand against the dealer
                     if (table[i].get_Active_Split() == true)
                     {
-                        if (table[i].sum_Split() > dealer.sum_Hand() || dealer.sum_Hand() > 21)
+                        if (table[i].sum_Split() > dealer.sum_Hand(true) || dealer.sum_Hand(true) > 21)
                         {
                             MessageBox.Show(table[i].get_Name() + "'s split hand has won!");
                             table[i].give_Money(table[i].get_Split_Bet() * 2);
                         }
-                        else if (table[i].sum_Split() < dealer.sum_Hand())
+                        else if (table[i].sum_Split() < dealer.sum_Hand(true))
                         {
                             MessageBox.Show(table[i].get_Name() + "'s split hand has lost!");
                         }
