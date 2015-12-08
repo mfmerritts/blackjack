@@ -202,12 +202,12 @@ namespace Blackjack
                         }
                     }
                 }
+                MessageBox.Show("total is " + gameTable1.table[i].sum_Hand());
                 if (gameTable1.table[i].sum_Hand() > 21)
                 {
                     gameTable1.table[i].deactivate();
                     MessageBox.Show("Sorry " + gameTable1.table[i].get_Name() + ", you have bust");
-                }
-                MessageBox.Show("total is " + gameTable1.table[i].sum_Hand());             
+                }             
         }
 
         private void button7_Click(object sender, EventArgs e)

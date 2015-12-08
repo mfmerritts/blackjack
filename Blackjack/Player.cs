@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Blackjack
 {
@@ -37,7 +38,7 @@ namespace Blackjack
         public void give_Money(int more)
         {
             money += more;
-            Console.WriteLine(this.get_Name() + " was given " + more + " dollars and now has " + this.get_Money());
+            MessageBox.Show(this.get_Name() + " was given " + more + " dollars and now has " + this.get_Money());
         }
 
         //takes money from player. This function may not be used and could possibly be removed.
