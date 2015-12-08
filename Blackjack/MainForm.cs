@@ -173,6 +173,7 @@ namespace Blackjack
             gameTable1.table[0].set_Bet(gameTable1.table[0].get_tempBet());
             this.richTextBox2.Text = "Pot: $" + gameTable1.table[0].get_Money().ToString();
             gameTable1.test_Round();
+            this.pictureBox6.Image = Blackjack.Properties.Resources.ace_of_clubs;
             this.button5.Enabled = false;
 
             //enable surrender
