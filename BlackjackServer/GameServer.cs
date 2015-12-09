@@ -11,7 +11,7 @@ namespace BlackjackServer
         private EasyNetwork.Server server = new EasyNetwork.Server("tcp://*:3000");
         private bool isRunning = true;
 
-        private const int MAX_PLAYERS = 7;
+        private const int MAX_PLAYERS = 5;
         private NetworkObjects.PlayerListing playerListing;
 
         public GameServer()
@@ -58,7 +58,7 @@ namespace BlackjackServer
                 // TODO: Check other things
 
                 // Player successfully joins game:
-                AddPlayerToGame(joinMsg.Name, clientId);
+                AddPlayerToGame(joinMsg.Name, clientId); 
             }
 
             //throw new NotImplementedException();

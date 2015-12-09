@@ -37,6 +37,8 @@ namespace Blackjack
                 NetworkObjects.PlayerJoined newPlayerMsg = receivedObject as NetworkObjects.PlayerJoined;
                 Player newPlayer = new Player(newPlayerMsg.Name, 1);
                 MainForm.gameTable1.add_Player(newPlayer);
+
+                MessageBox.Show(newPlayerMsg.Name + " joined the game");
             }
             else if (receivedObject is NetworkObjects.JoinGameResponse)
             {
