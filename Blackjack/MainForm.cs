@@ -38,6 +38,69 @@ namespace Blackjack
                 Player newPlayer = new Player(newPlayerMsg.Name, 1);
                 MainForm.gameTable1.add_Player(newPlayer);
             }
+            else if (receivedObject is NetworkObjects.JoinGameResponse)
+            {
+                NetworkObjects.JoinGameResponse joinResponseMsg = receivedObject as NetworkObjects.JoinGameResponse;
+                if(joinResponseMsg.Success)
+                {
+                    //create Blackjack table/cards
+                    gameTable1.create_Deck(1);
+                    gameTable1.shuffle_Deck();
+
+                    this.menuItem5.Enabled = true;
+                    this.button5.Visible = true;
+                    this.button6.Visible = true;
+                    this.button7.Visible = true;
+                    this.button8.Visible = true;
+                    this.button9.Visible = true;
+                    this.button11.Visible = true;
+
+                    this.button3.Visible = false;
+                    this.button4.Visible = false;
+
+                    this.richTextBox1.Visible = true;
+                    this.richTextBox2.Visible = true;
+
+                    this.pictureBox2.Enabled = true;
+                    this.pictureBox3.Enabled = true;
+                    this.pictureBox4.Enabled = true;
+                    this.pictureBox5.Enabled = true;
+                }
+            }
+            else if (receivedObject is NetworkObjects.PlayerListing)
+            {
+                NetworkObjects.PlayerListing playerListingMsg = receivedObject as NetworkObjects.PlayerListing;
+
+                int i = 0;
+                foreach(NetworkObjects.PlayerListing.Player player in playerListingMsg.Players)
+                {
+                    if (i == 0)
+                        textBox1.Text = player.Name;
+                    else if (i == 1)
+                        textBox2.Text = player.Name;
+                    else if (i == 2)
+                        textBox3.Text = player.Name;
+                    else if (i == 3)
+                        textBox4.Text = player.Name;
+                    else if (i == 4)
+                        textBox4.Text = player.Name;
+                    else if (i == 5)
+                        textBox5.Text = player.Name;
+                }
+
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = true;
+                textBox5.Visible = true;
+
+                textBox1.TextAlign = ContentAlignment.MiddleCenter;
+                textBox2.TextAlign = ContentAlignment.MiddleCenter;
+                textBox3.TextAlign = ContentAlignment.MiddleCenter;
+                textBox4.TextAlign = ContentAlignment.MiddleCenter;
+                textBox5.TextAlign = ContentAlignment.MiddleCenter;
+                textBox6.TextAlign = ContentAlignment.MiddleCenter;
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)

@@ -57,11 +57,11 @@ namespace BlackjackServer
 
                 // TODO: Check other things
 
-                // Player successfully joints game:
+                // Player successfully joins game:
                 AddPlayerToGame(joinMsg.Name, clientId);
             }
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void SendPlayerListingToPlayer(Guid clientId)
