@@ -44,6 +44,8 @@ namespace BlackjackServer
             // Recieve join game message
             if (receivedObject is NetworkObjects.JoinGame)
             {
+                Console.WriteLine("Incomming request from " + clientId.ToString());
+
                 NetworkObjects.JoinGame joinMsg = receivedObject as NetworkObjects.JoinGame;
 
                 // Check if game is full
