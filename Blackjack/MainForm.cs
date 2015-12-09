@@ -241,6 +241,7 @@ namespace Blackjack
             {
                 MessageBox.Show("To start select the bet amount by clicking the Chips and then click Bet!");
                 Player one = new Player(tempName.InputResult, 1);
+
                 MainForm.gameTable1.add_Player(one);
 
                 textBox1.Text = one.get_Name();
@@ -276,6 +277,9 @@ namespace Blackjack
             InputName input = new InputName(this);
             if (input.ShowDialog() == DialogResult.OK)
             {
+                Player one = new Player(input.InputResult, 1);
+                MainForm.gameTable1.add_Player(one);
+
                 this.labelJoiningGame.Visible = true;
                 NetworkObjects.JoinGame joinGameMsg = new NetworkObjects.JoinGame();
                 joinGameMsg.Name = input.InputResult;
