@@ -15,7 +15,7 @@ namespace Blackjack
 {
     public partial class MainForm : Form
     {
-        Client client = new Client("tcp://localhost:3000");
+        Client client = new Client("tcp://a01951118-8.bluezone.usu.edu:3000");
         InputName tempName;
 
         public int clicked = 1;
