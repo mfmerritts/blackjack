@@ -82,6 +82,10 @@ namespace BlackjackServer
         {
             this.playerListing.AddPlayer(name, newClientId);
 
+            NetworkObjects.JoinGameResponse mJoinResponse = new NetworkObjects.JoinGameResponse();
+            mJoinResponse.Success = true;
+            server.Send(mJoinResponse, newClientId);
+
             // Send new player the full player listing
             server.Send(this.playerListing, newClientId);
 
