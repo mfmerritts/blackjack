@@ -57,15 +57,25 @@ namespace Blackjack
         {
             players_Turn = false;
         }
-        public int sum_Hand()
+        public int sum_Hand(bool done)
         {
             int sum = 0;
-            for (int i = 0; i < hand.Count(); i++)
+            if (done == true)
             {
-                sum = sum + hand[i].get_Score();
+                for (int i = 0; i < hand.Count(); i++)
+                {
+                    sum = sum + hand[i].get_Score(false);
+                }
+                return sum;
             }
-
-            return sum;
+            else
+            {
+                for (int i = 0; i < hand.Count(); i++)
+                {
+                    sum = sum + hand[i].get_Score(true);
+                }
+                return sum;
+            }
         }
 
         public void print_Hand()

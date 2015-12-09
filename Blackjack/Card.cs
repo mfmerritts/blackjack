@@ -35,19 +35,19 @@ namespace Blackjack
             if (rank == 'k') { score = 10; }
 
             //hearts
-            if (rank == 'a' && suit == "heart") { image = Blackjack.Properties.Resources.ace_of_hearts;}
-            if (rank == '1' && suit == "heart") { image = Blackjack.Properties.Resources._10_of_hearts;}
-            if (rank == '2' && suit == "heart") { image = Blackjack.Properties.Resources._2_of_hearts;}
-            if (rank == '3' && suit == "heart") { image = Blackjack.Properties.Resources._3_of_hearts;}
-            if (rank == '4' && suit == "heart") { image = Blackjack.Properties.Resources._4_of_hearts;}
-            if (rank == '5' && suit == "heart") { image = Blackjack.Properties.Resources._5_of_hearts;}
-            if (rank == '6' && suit == "heart") { image = Blackjack.Properties.Resources._6_of_hearts;}
-            if (rank == '7' && suit == "heart") { image = Blackjack.Properties.Resources._7_of_hearts;}
-            if (rank == '8' && suit == "heart") { image = Blackjack.Properties.Resources._8_of_hearts;}
-            if (rank == '9' && suit == "heart") { image = Blackjack.Properties.Resources._9_of_hearts;}
-            if (rank == 'j' && suit == "heart") { image = Blackjack.Properties.Resources.jack_of_hearts;}
-            if (rank == 'q' && suit == "heart") { image = Blackjack.Properties.Resources.queen_of_hearts;}
-            if (rank == 'k' && suit == "heart") { image = Blackjack.Properties.Resources.king_of_hearts;}
+            if (rank == 'a' && suit == "heart") { image = Blackjack.Properties.Resources.ace_of_hearts; }
+            if (rank == '1' && suit == "heart") { image = Blackjack.Properties.Resources._10_of_hearts; }
+            if (rank == '2' && suit == "heart") { image = Blackjack.Properties.Resources._2_of_hearts; }
+            if (rank == '3' && suit == "heart") { image = Blackjack.Properties.Resources._3_of_hearts; }
+            if (rank == '4' && suit == "heart") { image = Blackjack.Properties.Resources._4_of_hearts; }
+            if (rank == '5' && suit == "heart") { image = Blackjack.Properties.Resources._5_of_hearts; }
+            if (rank == '6' && suit == "heart") { image = Blackjack.Properties.Resources._6_of_hearts; }
+            if (rank == '7' && suit == "heart") { image = Blackjack.Properties.Resources._7_of_hearts; }
+            if (rank == '8' && suit == "heart") { image = Blackjack.Properties.Resources._8_of_hearts; }
+            if (rank == '9' && suit == "heart") { image = Blackjack.Properties.Resources._9_of_hearts; }
+            if (rank == 'j' && suit == "heart") { image = Blackjack.Properties.Resources.jack_of_hearts; }
+            if (rank == 'q' && suit == "heart") { image = Blackjack.Properties.Resources.queen_of_hearts; }
+            if (rank == 'k' && suit == "heart") { image = Blackjack.Properties.Resources.king_of_hearts; }
             //diamonds
             if (rank == 'a' && suit == "diamond") { image = Blackjack.Properties.Resources.ace_of_diamonds; }
             if (rank == '1' && suit == "diamond") { image = Blackjack.Properties.Resources._10_of_diamonds; }
@@ -94,9 +94,17 @@ namespace Blackjack
         }
 
         //returns score
-        public int get_Score()
+        public int get_Score(bool zreo)
         {
-            return score;
+            if (zreo == false)
+            {
+                return score;
+            }
+            else
+            {
+                score = 0;
+                return score;
+            }
         }
 
         //returns rank
@@ -114,7 +122,7 @@ namespace Blackjack
         //changes ace score from 11 to 1
         public void change_Ace()
         {
-           if(rank == 'a')
+            if (rank == 'a')
             {
                 score = 1;
                 rank = 'c';

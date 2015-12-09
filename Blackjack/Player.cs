@@ -17,7 +17,7 @@ namespace Blackjack
         public Boolean active_split;
         public List<Card> second_Hand;
 
-        public Player (string name, int id) : base(name, id)
+        public Player(string name, int id) : base(name, id)
         {
             money = 1000;
             active = false;
@@ -100,7 +100,7 @@ namespace Blackjack
             if (this.hand.Count() > 0)
             {
                 //makes sure player has enough money
-                if(this.get_Bet() > money)
+                if (this.get_Bet() > money)
                 {
                     Console.WriteLine("Sorry " + this.get_Name() + ", you do not have enough money to split.");
                     return;
@@ -121,8 +121,8 @@ namespace Blackjack
             {
                 Console.WriteLine(this.get_Name() + " does not have any cards to split");
             }
-        }  
-        
+        }
+
         public void set_tempBet(int x)
         {
             tempBet += x;
@@ -137,7 +137,7 @@ namespace Blackjack
         {
             tempBet = 0;
         }
-         
+
         //sets bet. This will take the amount form the money variable and put it into the bet variable             
         public void set_Bet(int x)
         {
@@ -173,7 +173,7 @@ namespace Blackjack
             {
                 Console.WriteLine(this.get_Name() + " has doubled the bet from " + bet + " to " + (bet * 2));
                 money = money - bet;
-                bet = bet * 2;              
+                bet = bet * 2;
             }
             else
             {
@@ -239,11 +239,11 @@ namespace Blackjack
         public int sum_Split()
         {
             int sum = 0;
-            if(second_Hand.Count() > 0)
+            if (second_Hand.Count() > 0)
             {
-                for(int i = 0; i < second_Hand.Count(); i++)
+                for (int i = 0; i < second_Hand.Count(); i++)
                 {
-                    sum = second_Hand[i].get_Score() + sum;
+                    sum = second_Hand[i].get_Score(false) + sum;
                 }
             }
             return sum;
