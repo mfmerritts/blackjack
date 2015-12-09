@@ -60,9 +60,10 @@ namespace Blackjack
         }
 
         //Adds player to table
-        public void add_Player(Player player)
+        public int add_Player(Player player)
         {
             Boolean found = false;
+            int found_i = -1;
 
             //loops through the table for the first open spot
             for (int i = 0; i < 5; i++)
@@ -71,6 +72,7 @@ namespace Blackjack
                 {
                     table[i] = player;
                     found = true;
+                    found_i = i;
                 }
             }
 
@@ -79,6 +81,8 @@ namespace Blackjack
             {
                 Console.WriteLine("Sorry " + player.get_Name() + ", this table is full.");
             }
+
+            return found_i;
         }
 
         public void remove_Player(Player player)

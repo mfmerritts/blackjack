@@ -36,9 +36,24 @@ namespace Blackjack
             {
                 NetworkObjects.PlayerJoined newPlayerMsg = receivedObject as NetworkObjects.PlayerJoined;
                 Player newPlayer = new Player(newPlayerMsg.Name, 1);
-                MainForm.gameTable1.add_Player(newPlayer);
 
-                MessageBox.Show(newPlayerMsg.Name + " joined the game");
+                int id = MainForm.gameTable1.add_Player(newPlayer);
+
+                if (id != -1)
+                {
+                    if (id == 0)
+                        SetLabelText(textBox1, newPlayerMsg.Name);
+                    else if (id == 1)
+                        SetLabelText(textBox2, newPlayerMsg.Name);
+                    else if (id == 2)
+                        SetLabelText(textBox3, newPlayerMsg.Name);
+                    else if (id == 3)
+                        SetLabelText(textBox4, newPlayerMsg.Name);
+                    else if (id == 4)
+                        SetLabelText(textBox5, newPlayerMsg.Name);
+                }
+
+                //MessageBox.Show(newPlayerMsg.Name + " joined the game");
             }
             else if (receivedObject is NetworkObjects.JoinGameResponse)
             {
@@ -71,7 +86,22 @@ namespace Blackjack
                 }
             }
         }
+        /*
+        delegate void AddNewPlayerCallback(String name, int spot);
 
+        private void AddNewPlayer(String name, int spot)
+        {
+            if (textBox1.InvokeRequired)
+            {
+                AddNewPlayerCallback callback = new AddNewPlayerCallback(AddNewPlayer);
+                this.Invoke(callback, new object[] { name, spot });
+            }
+            else
+            {
+                if (spot == 0)
+            }
+        }
+        */
         delegate void SetLabelTextCallback(Label label, String text);
 
         private void SetLabelText(Label label, String text)
