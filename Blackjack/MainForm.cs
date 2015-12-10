@@ -422,6 +422,9 @@ namespace Blackjack
 
                 this.button12.Visible = true;
                 this.button13.Visible = true;
+
+                this.button12.BringToFront();
+                this.button13.BringToFront();
             }
         }
 
